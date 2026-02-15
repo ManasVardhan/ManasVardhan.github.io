@@ -1,225 +1,273 @@
-<!DOCTYPE HTML>
-
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>Manas Vardhan's personal website</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="./assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="./assets/css/noscript.css" />
-	</noscript>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manas Vardhan — AI Developer & Researcher</title>
+  <meta name="description" content="Manas Vardhan — AI Developer & Researcher based in Los Angeles. Building intelligent systems at the intersection of research and product.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <div class="grain"></div>
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-dot" id="cursor-dot"></div>
 
-<body class="is-preload">
+  <!-- Side Navigation -->
+  <nav class="side-nav" id="side-nav">
+    <div class="side-nav__line"></div>
+    <a href="#hero" class="side-nav__dot active" data-label="Home" data-section="hero"><span></span></a>
+    <a href="#about" class="side-nav__dot" data-label="About" data-section="about"><span></span></a>
+    <a href="#experience" class="side-nav__dot" data-label="Experience" data-section="experience"><span></span></a>
+    <a href="#research" class="side-nav__dot" data-label="Research" data-section="research"><span></span></a>
+    <a href="#projects" class="side-nav__dot" data-label="Projects" data-section="projects"><span></span></a>
+    <a href="#contact" class="side-nav__dot" data-label="Contact" data-section="contact"><span></span></a>
+    <div class="side-nav__label" id="nav-label">Home</div>
+  </nav>
 
-	<!-- Sidebar -->
-	<section id="sidebar">
-		<div class="inner">
-			<nav>
-				<ul>
-					<li><a href="#intro">Welcome</a></li>
-					<li><a href="#one">Who am I</a></li>
-					<li><a href="#two">What do I do</a></li>
-					<li><a href="#three">Get in touch</a></li>
-				</ul>
-			</nav>
-		</div>
-	</section>
+  <!-- Main Content -->
+  <main class="main-scroll" id="main">
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+    <!-- Hero -->
+    <section class="section hero" id="hero">
+      <div class="hero__content">
+        <h1 class="hero__name reveal-text">
+          <span class="reveal-line">Manas</span>
+          <span class="reveal-line">Vardhan</span>
+        </h1>
+        <p class="hero__subtitle reveal-fade"><span class="mono">AI Developer & Researcher</span> <span class="hero__divider">—</span> <span class="mono">Los Angeles</span></p>
+      </div>
+      <div class="scroll-indicator reveal-fade">
+        <span class="mono">scroll</span>
+        <div class="scroll-indicator__line"></div>
+      </div>
+    </section>
 
-		<!-- Intro -->
-		<section id="intro" class="wrapper style1 fullscreen fade-up">
-			<div class="inner">
-				<h1>Manas Vardhan</h1>
-				<p>AI Developer<br />
-					Making scalable and reliable AI solutions</p>
-				<ul class="actions">
-					<li><a href="#one" class="button scrolly">Learn more</a></li>
-				</ul>
-			</div>
-		</section>
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="section__inner">
+        <div class="section__number mono">01</div>
+        <div class="section__watermark">01</div>
+        <div class="about__content">
+          <div class="about__text reveal-fade">
+            <p>I build intelligent systems at the intersection of research and product — from multi-agent architectures to production ML pipelines. My work spans founding AI startups, engineering at scale for JPMorgan Chase, and publishing research on temporal stability in latent spaces. I'm drawn to problems where the math is beautiful and the impact is real.</p>
+          </div>
+          <blockquote class="about__quote reveal-text">
+            <span class="reveal-line">"The best AI isn't the one</span>
+            <span class="reveal-line">that thinks the fastest —</span>
+            <span class="reveal-line">it's the one that knows</span>
+            <span class="reveal-line">when to think at all."</span>
+          </blockquote>
+          <div class="about__skills reveal-fade">
+            <div class="skill-group">
+              <span class="mono skill-label">Languages</span>
+              <span>Python, SQL, JavaScript</span>
+            </div>
+            <div class="skill-group">
+              <span class="mono skill-label">Frameworks</span>
+              <span>PyTorch, TensorFlow, Transformers, FastAPI, LangChain</span>
+            </div>
+            <div class="skill-group">
+              <span class="mono skill-label">Domains</span>
+              <span>LLMs, Computer Vision, NLP, Multi-Agent Systems, MLOps, RAG</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<!-- One -->
-		<section id="one" class="wrapper style2 spotlights">
-			<section>
-				<a href="#" class="image"><img src="images/WorkExp.jpg" alt="" data-position="center center" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Work Experience</h2>
-						<p>Currently working as a Software Development Engineer at <a href="https://www.jpmorgan.com/" target="_blank">JPMorgan Chase & Co.</a>, focusing on Machine Learning and Data Science. Previously held positions as a Data Scientist and Machine Learning Engineer at SimpliClarify and SmokeTrees LLP.</p>
-						<ul class="actions">
-							<li><a href="more.html" class="button">Learn more</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section>
-				<a href="#" class="image"><img src="images/research.avif" alt="" data-position="top center" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Research</h2>
-                        <p>My research has included mitigating biases in credit scoring models against low income applicants, balancing urban development with needs of rural communities to ensure sustainable growth and enhancing the reliability of LLMs for enable adoption in sensitive areas like psychology </p>
-                        <ul class="actions">
-							<li><a href="more.html" class="button">Learn more</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-			<section>
-				<a href="#" class="image"><img src="images/projects.png" alt="" data-position="25% 25%" /></a>
-				<div class="content">
-					<div class="inner">
-						<h2>Projects</h2>
-                        <p>My work includes developing a machine learning-based system for monitoring and improving video stream quality, achieving high detection accuracy. I also focused on using computer vision techniques for environmental monitoring, specifically detecting oil spills from satellite images. I also developed a predictive tool for assessing burnout risk, which was deployed in a real-time application to help users manage their well-being.                        </p>
-                        <ul class="actions">
-							<li><a href="more.html" class="button">Learn more</a></li>
-						</ul>
-					</div>
-				</div>
-			</section>
-		</section>
+    <!-- Experience -->
+    <section class="section experience" id="experience">
+      <div class="section__inner">
+        <div class="section__number mono">02</div>
+        <div class="section__watermark">02</div>
+        <h2 class="section__title reveal-text"><span class="reveal-line">Experience</span></h2>
 
-		<!-- Two -->
-		<section id="two" class="wrapper style3 fade-up">
-			<div class="inner">
-				<h2>Some details you might like</h2>
-				<div class="features">
-					<section>
-						<span class="icon solid major fa-code"></span>
-						<h3>Technical Expertise</h3>
-						<p>Proficient in Python, Splunk, Cribl, AWS, with extensive experience in model development, deployment, and performance optimization in real-world applications.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-lock"></span>
-						<h3>Data Driven & Results-Oriented</h3>
-						<p>I benchmark my progress by quantifying my impact through benchmarks. This enables me to track and focus my effort and measure the impact of my work.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-cog"></span>
-						<h3>Scalable Approach</h3>
-						<p>I often deal with high volumes of data and set up data pipelines that carry mutliple TBs of data daily. To handle such high volumes, I focus specifically on making systems scalable.</p>
-					</section>
-					<section>
-						<span class="icon solid major fa-desktop"></span>
-						<h3>Tech Innovation</h3>
-						<p>I often lead efforts in optimizations and development of new features, often developing ML use-cases to reduce workloads on physical systems enabling better use of employee hours.</p>
-					</section>
-					<!-- <section>
-						<span class="icon solid major fa-link"></span>
-						<h3>Excellent Communicator</h3>
-						<p>Having technical skills alone doesn't cut it. Over the years I have invested significantly in
-							becoming an efficient communicator through Toastmasters Inc, this enables me to work in extremely diverse
-						teams as well.</p>
-					</section>
-					<section>
-						<span class="icon major fa-gem"></span>
-						<h3>An Overall Perfectionist</h3>
-						<p>Whether it be mathematics, development or management, I have a common goal in all of it: to
-							attain excellence and subsequently perfection.</p>
-					</section> -->
-				</div>
-				<ul class="actions">
-					<li><a href="more.html" class="button">Learn more</a></li>
-				</ul>
-			</div>
-		</section>
+        <div class="exp-row reveal-fade" data-company="Startup">
+          <div class="exp-row__bg-text">Startup</div>
+          <span class="mono exp-row__year">2024 — Present</span>
+          <h3 class="exp-row__title">Founder & AI Developer</h3>
+          <span class="exp-row__company">Startup</span>
+          <p class="exp-row__desc">Building multi-agent systems and AI-native products from zero to one.</p>
+        </div>
 
-		<!-- Three -->
-		<section id="three" class="wrapper style1 fade-up">
-			<div class="inner">
-				<h2>Get in touch</h2>
-				<p>More than competition, today industry is thriving on collaboration, I am sure it will be great
-					collaborating with you as well.</p>
-				<div class="split style1">
-					<section>
-						<br>
-						<div class="fields">
-							<div class="field half">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" />
-							</div>
-							<br>
-							<div class="field half">
-								<label for="email">Email</label>
-								<input type="text" name="email" id="email" />
-							</div>
-							<br>
-							<div class="field">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="5"></textarea>
-							</div>
-						</div>
-						<br>
-						<ul class="actions">
-							<li><a href="mailto:manasvardhan@gmail.com" class="button submit">Send Message</a></li>
-						</ul>
-					</section>
-					<section>
-						<ul class="contact">
-							<li>
-								<h3>Address</h3>
-								<span>645A/223A Jankivihar<br />
-									Jankipuram,Lucknow-226021<br />
-									India</span>
-							</li>
-							<li>
-								<h3>Email</h3>
-								<a href="mailto:manasvardhan@gmail.com">manasvardhan@gmail.com</a>
-							</li>
-							<li>
-								<h3>Phone</h3>
-								<span>+91-9795685079</span>
-							</li>
-							<li>
-								<h3>Social</h3>
-								<ul class="icons">
-									<li><a href="https://twitter.com/vardhan_manas" class="icon brands fa-twitter"><span
-												class="label">Twitter</span></a></li>
-									<li><a href="https://www.facebook.com/manas.vardhan/"
-											class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
-									</li>
-									<li><a href="https://github.com/ManasVardhan" class="icon brands fa-github"><span
-												class="label">GitHub</span></a>
-									</li>
-									<li><a href="https://www.instagram.com/manasvardhan/"
-											class="icon brands fa-instagram"><span class="label">Instagram</span></a>
-									</li>
-									<li><a href="https://www.linkedin.com/in/manas-vardhan/"
-											class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</section>
-				</div>
-			</div>
-		</section>
+        <div class="exp-row reveal-fade" data-company="JPMorgan">
+          <div class="exp-row__bg-text">JPMorgan</div>
+          <span class="mono exp-row__year">2022 — 2024</span>
+          <h3 class="exp-row__title">Software Development Engineer</h3>
+          <span class="exp-row__company">JPMorgan Chase</span>
+          <p class="exp-row__desc">Enterprise-scale engineering across trading and risk platforms.</p>
+        </div>
 
-	</div>
+        <div class="exp-row reveal-fade" data-company="SimpliClarify">
+          <div class="exp-row__bg-text">SimpliClarify</div>
+          <span class="mono exp-row__year">2021 — 2022</span>
+          <h3 class="exp-row__title">Data Scientist</h3>
+          <span class="exp-row__company">SimpliClarify</span>
+          <p class="exp-row__desc">NLP pipelines and analytics for document intelligence products.</p>
+        </div>
 
-	<!-- Footer -->
-	<footer id="footer" class="wrapper style1-alt">
-		<div class="inner">
-			<ul class="menu">
-				<li>&copy; Untitled. All rights reserved.</li>
-				<!-- <li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
-			</ul>
-		</div>
-	</footer>
+        <div class="exp-row reveal-fade" data-company="SmokeTrees">
+          <div class="exp-row__bg-text">SmokeTrees</div>
+          <span class="mono exp-row__year">2020 — 2021</span>
+          <h3 class="exp-row__title">ML Engineer</h3>
+          <span class="exp-row__company">SmokeTrees</span>
+          <p class="exp-row__desc">Computer vision and deep learning models shipped to production.</p>
+        </div>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+        <div class="exp-row reveal-fade" data-company="VIT">
+          <div class="exp-row__bg-text">VIT</div>
+          <span class="mono exp-row__year">2018 — 2022</span>
+          <h3 class="exp-row__title">B.Tech Computer Science</h3>
+          <span class="exp-row__company">VIT University</span>
+          <p class="exp-row__desc">Foundation in algorithms, systems, and machine learning research.</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Research -->
+    <section class="section research" id="research">
+      <div class="section__inner">
+        <div class="section__number mono">03</div>
+        <div class="section__watermark">03</div>
+
+        <div class="research__hero reveal-fade">
+          <h2 class="research__title reveal-text">
+            <span class="reveal-line">Latent-Space</span>
+            <span class="reveal-line">Temporal</span>
+            <span class="reveal-line">Stabilizers</span>
+          </h2>
+          <p class="research__summary">A novel approach to stabilizing temporal coherence in generative latent spaces, enabling smoother transitions and more controllable generation across sequential outputs.</p>
+        </div>
+
+        <div class="research__list reveal-fade">
+          <div class="research__item">
+            <span class="mono">2023</span>
+            <span>Bias in Credit Scoring — Fairness-aware ML for financial risk assessment</span>
+          </div>
+          <div class="research__item">
+            <span class="mono">2024</span>
+            <span>LLM Reliability — Measuring and improving consistency in large language model outputs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section projects" id="projects">
+      <div class="section__inner">
+        <div class="section__number mono">04</div>
+        <div class="section__watermark">04</div>
+        <h2 class="section__title reveal-text"><span class="reveal-line">Projects</span></h2>
+      </div>
+      <div class="projects__gallery" id="projects-gallery">
+        <div class="projects__track" id="projects-track">
+
+          <div class="project-panel" style="--accent: #d4a574">
+            <div class="project-panel__name">Agent Marketplace</div>
+            <div class="project-panel__content">
+              <h3>Agent Marketplace</h3>
+              <p>A platform for discovering, deploying, and orchestrating autonomous AI agents across enterprise workflows.</p>
+              <span class="mono">Multi-Agent · LangChain · FastAPI</span>
+            </div>
+          </div>
+
+          <div class="project-panel" style="--accent: #8b2252">
+            <div class="project-panel__name">Product Advisor</div>
+            <div class="project-panel__content">
+              <h3>Product Advisor Agent</h3>
+              <p>Conversational AI that understands product catalogs and guides users to optimal purchasing decisions via RAG.</p>
+              <span class="mono">RAG · LLMs · Embeddings</span>
+            </div>
+          </div>
+
+          <div class="project-panel" style="--accent: #2a6f7f">
+            <div class="project-panel__name">Deal Scout</div>
+            <div class="project-panel__content">
+              <h3>Deal Scout</h3>
+              <p>Intelligent deal aggregation engine that monitors, scores, and surfaces the best opportunities in real-time.</p>
+              <span class="mono">NLP · Scraping · ML Scoring</span>
+            </div>
+          </div>
+
+          <div class="project-panel" style="--accent: #d4a574">
+            <div class="project-panel__name">Code Suggest</div>
+            <div class="project-panel__content">
+              <h3>Code Suggestion Agent</h3>
+              <p>Context-aware code completion and refactoring suggestions powered by fine-tuned transformer models.</p>
+              <span class="mono">Transformers · AST · Python</span>
+            </div>
+          </div>
+
+          <div class="project-panel" style="--accent: #8b2252">
+            <div class="project-panel__name">Oil Spill</div>
+            <div class="project-panel__content">
+              <h3>Oil Spill Detection</h3>
+              <p>Satellite imagery analysis using deep learning to detect and track marine oil spills for environmental response.</p>
+              <span class="mono">Computer Vision · PyTorch · SAR</span>
+            </div>
+          </div>
+
+          <div class="project-panel" style="--accent: #2a6f7f">
+            <div class="project-panel__name">Stream QoS</div>
+            <div class="project-panel__content">
+              <h3>Video Stream Quality ML</h3>
+              <p>Real-time quality of service prediction for video streaming, optimizing bitrate and buffer management.</p>
+              <span class="mono">ML · Streaming · Optimization</span>
+            </div>
+          </div>
+
+          <div class="project-panel" style="--accent: #d4a574">
+            <div class="project-panel__name">Burnout Risk</div>
+            <div class="project-panel__content">
+              <h3>Burnout Risk Prediction</h3>
+              <p>Predictive model analyzing work patterns and behavioral signals to identify early burnout indicators.</p>
+              <span class="mono">Classification · Wellness · NLP</span>
+            </div>
+          </div>
+
+          <div class="project-panel" style="--accent: #8b2252">
+            <div class="project-panel__name">Comm Agents</div>
+            <div class="project-panel__content">
+              <h3>Gmail & Slack Agents</h3>
+              <p>Autonomous agents that triage, draft, and manage communications across email and messaging platforms.</p>
+              <span class="mono">Agents · API · Automation</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="section__inner">
+        <div class="section__number mono">05</div>
+        <div class="section__watermark">05</div>
+        <div class="contact__content">
+          <h2 class="contact__title reveal-text">
+            <span class="reveal-line">Let's talk.</span>
+          </h2>
+          <a href="mailto:manasvardhan@gmail.com" class="contact__email reveal-fade mono">manasvardhan@gmail.com</a>
+          <div class="contact__links reveal-fade">
+            <a href="https://github.com/ManasVardhan" target="_blank" rel="noopener" class="text-link">GitHub</a>
+            <a href="https://linkedin.com/in/manas-vardhan" target="_blank" rel="noopener" class="text-link">LinkedIn</a>
+            <a href="https://x.com/vardhan_manas" target="_blank" rel="noopener" class="text-link">X</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span class="mono">© 2026 Manas Vardhan</span>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
