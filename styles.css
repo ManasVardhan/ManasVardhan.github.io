@@ -499,6 +499,16 @@ body.cursor-hover .custom-cursor {
   color: var(--text);
 }
 
+.project-panel__content h3 a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-panel__content h3 a:hover {
+  color: var(--accent);
+}
+
 .project-panel__content p {
   font-size: 0.9rem;
   line-height: 1.7;
