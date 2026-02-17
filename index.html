@@ -89,17 +89,17 @@
         <div class="exp-row reveal-fade" data-company="USC">
           <div class="exp-row__bg-text">USC</div>
           <span class="mono exp-row__year">2025 — Present</span>
-          <h3 class="exp-row__title">Researcher</h3>
+          <h3 class="exp-row__title">Graduate Researcher</h3>
           <span class="exp-row__company">Computational Physics Group, USC</span>
-          <p class="exp-row__desc">3D generation with large reconstruction models, modelling physical systems using transformer architectures.</p>
+          <p class="exp-row__desc">Built a novel sparse-view 3D reconstruction pipeline using multi-view latent fusion on frozen vision backbones, cutting compute requirements while matching fine-tuned model quality. Leading 6 independent research projects targeting NeurIPS and EMNLP 2026 across LLM agents, reasoning efficiency, prompt robustness, and video generation.</p>
         </div>
 
         <div class="exp-row reveal-fade" data-company="USC GSG">
           <div class="exp-row__bg-text">USC GSG</div>
-          <span class="mono exp-row__year">2025 — Present</span>
+          <span class="mono exp-row__year">Aug 2025 — Present</span>
           <h3 class="exp-row__title">Finance Intern</h3>
           <span class="exp-row__company">Graduate Student Government, USC</span>
-          <p class="exp-row__desc">Financial operations and budget management for graduate student initiatives.</p>
+          <p class="exp-row__desc">Managing a six-figure annual budget allocation across 200+ graduate student organizations. Streamlining reimbursement workflows and financial reporting processes, reducing processing time by 40%. Coordinating funding proposals and expenditure tracking for campus-wide graduate initiatives.</p>
         </div>
 
         <div class="exp-row reveal-fade" data-company="Friday">
@@ -107,7 +107,7 @@
           <span class="mono exp-row__year">2025 — Present</span>
           <h3 class="exp-row__title">Founder & AI Developer</h3>
           <span class="exp-row__company">Friday Inc</span>
-          <p class="exp-row__desc">Building multi-agent systems and AI-native products from zero to one.</p>
+          <p class="exp-row__desc">Building multi-agent systems and AI-native developer tools from zero to one. Shipped 6 open-source Python libraries for the LLM ecosystem covering cost tracking, prompt versioning, safety validation, benchmarking, and agent observability. Active open-source contributor to HuggingFace Transformers, scikit-learn, PyTorch, and MLflow.</p>
         </div>
 
         <div class="exp-row reveal-fade" data-company="JPMorgan">
@@ -115,7 +115,7 @@
           <span class="mono exp-row__year">2023 — 2025</span>
           <h3 class="exp-row__title">Software Development Engineer</h3>
           <span class="exp-row__company">JPMorgan Chase</span>
-          <p class="exp-row__desc">Enterprise-scale engineering across trading and risk platforms.</p>
+          <p class="exp-row__desc">Enterprise-scale ML and data science engineering across trading and risk platforms. Built production pipelines processing millions of daily transactions with real-time anomaly detection and risk scoring.</p>
         </div>
 
         <div class="exp-row reveal-fade" data-company="SimpliClarify">
@@ -123,7 +123,7 @@
           <span class="mono exp-row__year">2021 — 2022</span>
           <h3 class="exp-row__title">Data Scientist</h3>
           <span class="exp-row__company">SimpliClarify</span>
-          <p class="exp-row__desc">NLP pipelines and analytics for document intelligence products.</p>
+          <p class="exp-row__desc">Built NLP pipelines for document intelligence products, automating extraction and classification across unstructured enterprise data.</p>
         </div>
 
         <div class="exp-row reveal-fade" data-company="SmokeTrees">
@@ -131,7 +131,7 @@
           <span class="mono exp-row__year">2020 — 2021</span>
           <h3 class="exp-row__title">ML Engineer</h3>
           <span class="exp-row__company">SmokeTrees</span>
-          <p class="exp-row__desc">Computer vision and deep learning models shipped to production.</p>
+          <p class="exp-row__desc">Shipped computer vision and deep learning models to production, from prototype to deployment at scale.</p>
         </div>
       </div>
     </section>
@@ -169,25 +169,47 @@
 
         <div class="research__hero reveal-fade">
           <h2 class="research__title reveal-text">
-            <span class="reveal-line">Latent-Space</span>
-            <span class="reveal-line">Temporal</span>
-            <span class="reveal-line">Stabilizers</span>
+            <span class="reveal-line">Research</span>
           </h2>
-          <p class="research__summary">A novel approach to stabilizing temporal coherence in generative latent spaces, enabling smoother transitions and more controllable generation across sequential outputs.</p>
+          <p class="research__summary">9 research projects spanning 3D generation, LLM agents, reasoning, and robustness. Targeting NeurIPS, EMNLP, and NAACL 2026.</p>
         </div>
 
         <div class="research__list reveal-fade">
           <div class="research__item">
             <span class="mono">2025</span>
-            <span>Multi-View Latent Fusion on Frozen Backbones for Sparse-View 3D Reconstruction — Lightweight convex-weighted fusion over TripoSR scene codes, outperforming billion-parameter diffusion baselines at &lt;0.05% parameter cost</span>
+            <span>Multi-View Latent Fusion on Frozen Backbones for Sparse-View 3D Reconstruction — Reconstructs 3D objects from as few as 4 views by reusing frozen pre-trained vision encoders, eliminating costly end-to-end fine-tuning while matching fully-trained baselines</span>
+          </div>
+          <div class="research__item">
+            <span class="mono">2025</span>
+            <span>Prompt Sensitivity Landscapes — Discovered that synonym substitutions destabilize LLM outputs more than typos or deletions. Identified prompt structures that are 3.6x more robust to perturbation. Targeting EMNLP 2026</span>
+          </div>
+          <div class="research__item">
+            <span class="mono">2025</span>
+            <span>Tool Use Reliability in LLM Agents — Built TUR-Bench (30 cases, 6 failure types). Found that LLMs skip available tools 36.7% of the time but never hallucinate fake tools. Failed responses are 5x longer than correct ones. Targeting EMNLP/NAACL 2026</span>
+          </div>
+          <div class="research__item">
+            <span class="mono">2025</span>
+            <span>Agent Memory Architectures — Designed CAM (Consolidation-Augmented Memory), a biologically-inspired memory system with episodic buffering, semantic consolidation, temporal decay, and interference resolution. Targeting NeurIPS 2026</span>
+          </div>
+          <div class="research__item">
+            <span class="mono">2025</span>
+            <span>Adaptive Test-Time Compute Allocation — Training RL policies (PPO) that dynamically allocate reasoning compute per step based on task difficulty, targeting 40% compute reduction with less than 2% accuracy loss. Targeting NeurIPS 2026</span>
+          </div>
+          <div class="research__item">
+            <span class="mono">2025</span>
+            <span>Efficient Reasoning Distillation — Distilling verbose chain-of-thought traces from large models into compact reasoning for smaller models, with NLI-based faithfulness scoring to verify logical preservation. Targeting NeurIPS 2026</span>
+          </div>
+          <div class="research__item">
+            <span class="mono">2025</span>
+            <span>Latent-Space Temporal Stabilizers for Video Diffusion — Lightweight temporal consistency modules that plug into existing video diffusion models to reduce inter-frame flickering without retraining. Targeting NeurIPS 2026</span>
           </div>
           <div class="research__item">
             <span class="mono">2024</span>
-            <span>LLM Reliability — Measuring and improving consistency in large language model outputs</span>
+            <span>LLM Reliability in Production Systems — Catalogued hallucination patterns, latency spikes, and degradation under load. Developed monitoring heuristics for detecting reliability regressions before end-user impact</span>
           </div>
           <div class="research__item">
             <span class="mono">2023</span>
-            <span>Bias in Credit Scoring — Fairness-aware ML for financial risk assessment</span>
+            <span>Bias in Automated Credit Scoring — Audited ML credit scoring pipelines for demographic bias across race, gender, and age. Proposed mitigation strategies that reduced bias while maintaining predictive accuracy</span>
           </div>
         </div>
       </div>
@@ -204,74 +226,56 @@
         <div class="projects__track" id="projects-track">
 
           <div class="project-panel" style="--accent: #d4a574">
-            <div class="project-panel__name">Agent Marketplace</div>
+            <div class="project-panel__name">LLM Cost Guardian</div>
             <div class="project-panel__content">
-              <h3>Agent Marketplace</h3>
-              <p>A platform for discovering, deploying, and orchestrating autonomous AI agents across enterprise workflows.</p>
-              <span class="mono">Multi-Agent · LangChain · FastAPI</span>
+              <h3><a href="https://github.com/ManasVardhan/llm-cost-guardian" target="_blank" rel="noopener">LLM Cost Guardian</a></h3>
+              <p>Real-time cost tracking for LLM API calls. Thread-safe tracker with 18 models, real pricing data, budget alerts, and per-session breakdowns. 17 tests, CI green.</p>
+              <span class="mono">Python · LLM APIs · Cost Optimization</span>
             </div>
           </div>
 
           <div class="project-panel" style="--accent: #8b2252">
-            <div class="project-panel__name">Product Advisor</div>
+            <div class="project-panel__name">LLM Shelter</div>
             <div class="project-panel__content">
-              <h3>Product Advisor Agent</h3>
-              <p>Conversational AI that understands product catalogs and guides users to optimal purchasing decisions via RAG.</p>
-              <span class="mono">RAG · LLMs · Embeddings</span>
+              <h3><a href="https://github.com/ManasVardhan/llm-shelter" target="_blank" rel="noopener">LLM Shelter</a></h3>
+              <p>Input/output safety validation for LLM applications. 5 validators covering PII detection, prompt injection, toxicity filtering, and content policy enforcement. Zero-dependency core. 32 tests.</p>
+              <span class="mono">Python · Security · NLP</span>
             </div>
           </div>
 
           <div class="project-panel" style="--accent: #2a6f7f">
-            <div class="project-panel__name">Deal Scout</div>
+            <div class="project-panel__name">PromptDiff</div>
             <div class="project-panel__content">
-              <h3>Deal Scout</h3>
-              <p>Intelligent deal aggregation engine that monitors, scores, and surfaces the best opportunities in real-time.</p>
-              <span class="mono">NLP · Scraping · ML Scoring</span>
+              <h3><a href="https://github.com/ManasVardhan/promptdiff" target="_blank" rel="noopener">PromptDiff</a></h3>
+              <p>Git-style prompt versioning with semantic diff. Track prompt evolution, compare versions structurally, and catch regressions before they hit production. 22 tests.</p>
+              <span class="mono">Python · Prompt Engineering · Versioning</span>
             </div>
           </div>
 
           <div class="project-panel" style="--accent: #d4a574">
-            <div class="project-panel__name">Code Suggest</div>
+            <div class="project-panel__name">Bench My LLM</div>
             <div class="project-panel__content">
-              <h3>Code Suggestion Agent</h3>
-              <p>Context-aware code completion and refactoring suggestions powered by fine-tuned transformer models.</p>
-              <span class="mono">Transformers · AST · Python</span>
+              <h3><a href="https://github.com/ManasVardhan/bench-my-llm" target="_blank" rel="noopener">Bench My LLM</a></h3>
+              <p>Lightweight LLM benchmarking toolkit. 4 prompt suites measuring time-to-first-token, tokens-per-second, and quality across models. Compare providers in minutes. 12 tests.</p>
+              <span class="mono">Python · Benchmarking · LLM APIs</span>
             </div>
           </div>
 
           <div class="project-panel" style="--accent: #8b2252">
-            <div class="project-panel__name">Oil Spill</div>
+            <div class="project-panel__name">Agent Replay</div>
             <div class="project-panel__content">
-              <h3>Oil Spill Detection</h3>
-              <p>Satellite imagery analysis using deep learning to detect and track marine oil spills for environmental response.</p>
-              <span class="mono">Computer Vision · PyTorch · SAR</span>
+              <h3><a href="https://github.com/ManasVardhan/agent-replay" target="_blank" rel="noopener">Agent Replay</a></h3>
+              <p>Record, replay, and debug LLM agent executions. Rich terminal viewer, HTML export, 7 modules for full observability into multi-step agent workflows. 21 tests.</p>
+              <span class="mono">Python · Agents · Observability</span>
             </div>
           </div>
 
           <div class="project-panel" style="--accent: #2a6f7f">
-            <div class="project-panel__name">Stream QoS</div>
+            <div class="project-panel__name">MCP Forge</div>
             <div class="project-panel__content">
-              <h3>Video Stream Quality ML</h3>
-              <p>Real-time quality of service prediction for video streaming, optimizing bitrate and buffer management.</p>
-              <span class="mono">ML · Streaming · Optimization</span>
-            </div>
-          </div>
-
-          <div class="project-panel" style="--accent: #d4a574">
-            <div class="project-panel__name">Burnout Risk</div>
-            <div class="project-panel__content">
-              <h3>Burnout Risk Prediction</h3>
-              <p>Predictive model analyzing work patterns and behavioral signals to identify early burnout indicators.</p>
-              <span class="mono">Classification · Wellness · NLP</span>
-            </div>
-          </div>
-
-          <div class="project-panel" style="--accent: #8b2252">
-            <div class="project-panel__name">Comm Agents</div>
-            <div class="project-panel__content">
-              <h3>Gmail & Slack Agents</h3>
-              <p>Autonomous agents that triage, draft, and manage communications across email and messaging platforms.</p>
-              <span class="mono">Agents · API · Automation</span>
+              <h3><a href="https://github.com/ManasVardhan/mcp-forge" target="_blank" rel="noopener">MCP Forge</a></h3>
+              <p>Scaffold production-ready MCP servers in seconds. 7 Jinja2 templates generating runnable Model Context Protocol servers with tools, resources, and tests. 23 tests.</p>
+              <span class="mono">Python · MCP · Code Generation</span>
             </div>
           </div>
 
