@@ -380,13 +380,8 @@ body.cursor-hover .custom-cursor {
 
 /* ── Research ──────────────────────────── */
 .research__hero {
-  background: var(--panel);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(232, 228, 222, 0.05);
-  padding: clamp(2rem, 5vw, 5rem);
+  padding: 0 0 2rem 0;
   margin-bottom: 3rem;
-  border-radius: 2px;
 }
 
 .research__title {
