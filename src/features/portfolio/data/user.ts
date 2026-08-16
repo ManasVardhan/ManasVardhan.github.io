@@ -32,7 +32,7 @@ export const USER: User = {
     },
   ],
   about: `
-- **M.S. Computer Science at USC**, graduating December 2026. GPA 3.73.
+- **M.S. Computer Science at USC**, graduating December 2026.
 - Two years at **JP Morgan Chase** building data and ML infrastructure.
 - **TMLR-accepted** research; now on agent memory, evaluation, and abstention.
 - Author of **7 PyPI packages** for LLM guardrails, tracing, and cost control.
