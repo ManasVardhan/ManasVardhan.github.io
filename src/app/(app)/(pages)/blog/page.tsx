@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 
 import { BlogList } from "@/features/blog/components/blog-list";
-import {
-  getHashnodePosts,
-  HASHNODE_BLOG_URL,
-} from "@/features/blog/data/hashnode";
+import { getHashnodePosts } from "@/features/blog/data/hashnode";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -29,17 +26,7 @@ export default async function BlogPage() {
 
         <div className="p-4">
           <p className="font-mono text-sm text-balance text-muted-foreground">
-            Long-form technical writing on agent runtimes, evaluation
-            methodology, and inference cost. Published on{" "}
-            <a
-              className="link"
-              href={HASHNODE_BLOG_URL}
-              target="_blank"
-              rel="noopener"
-            >
-              The Agent Stack
-            </a>
-            .
+            Between the lines of the papers you skimmed.
           </p>
         </div>
 
