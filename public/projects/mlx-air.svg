@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="mlx-air: transformer layers streaming from disk through a small resident memory window">
+  <defs>
+    <linearGradient id="mx-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16161a"/>
+      <stop offset="1" stop-color="#09090b"/>
+    </linearGradient>
+    <linearGradient id="mx-arrow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#34d399" stop-opacity="0.15"/>
+      <stop offset="0.5" stop-color="#34d399" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0.15"/>
+    </linearGradient>
+    <style>
+      .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+      .sans { font-family: ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#mx-bg)"/>
+
+  <text x="64" y="104" class="mono" font-size="40" letter-spacing="6" fill="#71717b">LAYER STREAMING</text>
+
+  <!-- resident window bracket -->
+  <g stroke="#34d399" stroke-width="4" fill="none">
+    <path d="M392 208 L392 180 L568 180 L568 208"/>
+  </g>
+  <text x="480" y="158" class="mono" font-size="38" fill="#34d399" text-anchor="middle">in RAM</text>
+
+  <!-- transformer layers: two resident, the rest paged out -->
+  <g>
+    <rect x="64" y="228" width="72" height="150" rx="14" fill="#1f1f23" stroke="#3f3f46" stroke-width="3"/>
+    <rect x="148" y="228" width="72" height="150" rx="14" fill="#1f1f23" stroke="#3f3f46" stroke-width="3"/>
+    <rect x="232" y="228" width="72" height="150" rx="14" fill="#1f1f23" stroke="#3f3f46" stroke-width="3"/>
+    <rect x="316" y="228" width="72" height="150" rx="14" fill="#1f1f23" stroke="#3f3f46" stroke-width="3"/>
+
+    <rect x="400" y="228" width="72" height="150" rx="14" fill="#34d399" fill-opacity="0.22" stroke="#34d399" stroke-width="5"/>
+    <rect x="484" y="228" width="72" height="150" rx="14" fill="#34d399" fill-opacity="0.22" stroke="#34d399" stroke-width="5"/>
+
+    <rect x="568" y="228" width="72" height="150" rx="14" fill="#1f1f23" stroke="#3f3f46" stroke-width="3"/>
+    <rect x="652" y="228" width="72" height="150" rx="14" fill="#1f1f23" stroke="#3f3f46" stroke-width="3"/>
+    <rect x="736" y="228" width="72" height="150" rx="14" fill="#1f1f23" stroke="#3f3f46" stroke-width="3"/>
+    <rect x="820" y="228" width="72" height="150" rx="14" fill="#1f1f23" stroke="#3f3f46" stroke-width="3"/>
+    <rect x="904" y="228" width="72" height="150" rx="14" fill="#1f1f23" stroke="#3f3f46" stroke-width="3"/>
+    <rect x="988" y="228" width="72" height="150" rx="14" fill="#1f1f23" stroke="#3f3f46" stroke-width="3"/>
+  </g>
+
+  <!-- streaming direction -->
+  <path d="M64 424 L1040 424" stroke="url(#mx-arrow)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M1018 408 L1044 424 L1018 440" fill="none" stroke="#34d399" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <text x="64" y="492" class="mono" font-size="40" fill="#a1a1aa">load, run, evict. one window at a time.</text>
+
+  <text x="64" y="640" class="sans" font-size="106" font-weight="600" fill="#fafafa">mlx-air</text>
+
+  <text x="1216" y="606" class="sans" font-size="66" font-weight="600" text-anchor="end">
+    <tspan fill="#71717b">35GB</tspan><tspan fill="#52525b"> → </tspan><tspan fill="#34d399">1.5GB</tspan>
+  </text>
+  <text x="1216" y="654" class="mono" font-size="34" fill="#71717b" text-anchor="end">peak memory · 70B on an 8GB Air</text>
+</svg>

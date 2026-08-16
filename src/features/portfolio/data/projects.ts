@@ -124,7 +124,7 @@ export const PROJECTS: Project[] = [
       start: "05.2026",
     },
     link: "https://github.com/ManasVardhan/mlx-air",
-    image: "/projects/mlx-air.jpg",
+    image: "/projects/mlx-air.svg",
     skills: ["MLX", "Apple Silicon", "Inference", "Systems"],
     description: `Layer-streaming inference for memory-constrained Apple Silicon.
 - Loads, runs, and evicts transformer layers sequentially from disk
