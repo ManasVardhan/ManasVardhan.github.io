@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Reward model bias probes across six axes">
+  <defs>
+    <linearGradient id="al-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16161a"/>
+      <stop offset="1" stop-color="#09090b"/>
+    </linearGradient>
+    <style>
+      .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+      .sans { font-family: ui-sans-serif, -apple-system, "Helvetica Neue", Arial, sans-serif; }
+      .axis { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 42px; fill: #a1a1aa; }
+    </style>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#al-bg)"/>
+
+  <text x="64" y="104" class="mono" font-size="40" letter-spacing="6" fill="#71717b">REWARD BIAS</text>
+
+  <line x1="470" y1="150" x2="470" y2="512" stroke="#3f3f46" stroke-width="4"/>
+
+  <g>
+    <text x="440" y="200" class="axis" text-anchor="end">length</text>
+    <rect x="470" y="168" width="700" height="42" rx="10" fill="#8b5cf6"/>
+  </g>
+  <g>
+    <text x="440" y="272" class="axis" text-anchor="end">sycophancy</text>
+    <rect x="470" y="240" width="580" height="42" rx="10" fill="#8b5cf6" fill-opacity="0.85"/>
+  </g>
+  <g>
+    <text x="440" y="344" class="axis" text-anchor="end">format</text>
+    <rect x="470" y="312" width="420" height="42" rx="10" fill="#8b5cf6" fill-opacity="0.7"/>
+  </g>
+  <g>
+    <text x="440" y="416" class="axis" text-anchor="end">position</text>
+    <rect x="470" y="384" width="286" height="42" rx="10" fill="#8b5cf6" fill-opacity="0.55"/>
+  </g>
+  <g>
+    <text x="440" y="488" class="axis" text-anchor="end">jailbreak</text>
+    <rect x="470" y="456" width="180" height="42" rx="10" fill="#8b5cf6" fill-opacity="0.4"/>
+  </g>
+
+  <text x="64" y="622" class="sans" font-size="80" font-weight="600" fill="#fafafa">Alignment &amp; RL</text>
+  <text x="1216" y="600" class="sans" font-size="92" font-weight="600" fill="#fafafa" text-anchor="end">4,800</text>
+  <text x="1216" y="648" class="mono" font-size="38" fill="#71717b" text-anchor="end">paired probes · 5 models</text>
+</svg>

@@ -1,0 +1,425 @@
+%------------------------------------------------------------------------------
+% Manas Vardhan -- COMPREHENSIVE CV (master document, not a targeted resume)
+% Purpose: single source of truth. Cut down per application.
+% Red \todo{} = needs your input. Orange \unv{} = metric not yet verified.
+%------------------------------------------------------------------------------
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\input{glyphtounicode}
+\usepackage[margin=0.55in]{geometry}
+\titlespacing*{\section}{0pt}{3.2ex plus 1ex minus .2ex}{2.0ex plus .2ex}
+
+\usepackage[default]{sourcesanspro}
+\usepackage{newtxtext,newtxmath}
+
+\pagestyle{fancy}
+\fancyhf{}
+% \fancyfoot[C]{\small Manas Vardhan \quad $\cdot$ \quad Page \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+\pdfgentounicode=1
+
+\newcommand{\todo}[1]{{\color{red}\textbf{[#1]}}}
+\definecolor{unvorange}{rgb}{0.85,0.42,0.0}
+\newcommand{\unv}[1]{{\color{unvorange}#1}}
+
+\newcommand{\sectionspace}{\vspace{-6pt}}
+\newcommand{\resumeItem}[1]{\item{{#1 \vspace{-3pt}}}}
+\newcommand{\titleItem}[1]{\textbf{#1}}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & #2 \\
+    \end{tabular*}\vspace{-8pt}
+}
+\newcommand{\resumeSubHeadingListStart}{\vspace{-2pt}\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-7pt}}
+
+\begin{document}
+
+% ================= HEADER =================
+\begin{center}
+    \textbf{\LARGE Manas Vardhan} \\ \vspace{1mm}
+    \textit{Los Angeles, CA, USA} $|$ \textit{213-691-5928} $|$
+    \href{mailto:mvardhan@usc.edu}{\textit{mvardhan@usc.edu}} $|$
+    \href{http://www.linkedin.com/in/manas-vardhan/}{\textit{linkedin.com/in/manas-vardhan}} \\
+    \href{https://github.com/ManasVardhan}{\textit{github.com/ManasVardhan}} $|$
+    \href{https://theagentstack.hashnode.dev/}{\textit{theagentstack.hashnode.dev}} $|$
+    \href{https://pypi.org/user/ManasVardhan/}{\textit{pypi.org/user/ManasVardhan}} \\ \vspace{1mm}
+    \textit{M.S. Computer Science, USC $|$ Graduating December 2026}
+\end{center}
+
+% ================= SUMMARY =================
+% \section{Profile}\vspace{1mm}
+% ML and infrastructure engineer with two years of production experience at JP Morgan Chase and a track record of
+% shipping open-source AI infrastructure. Published seven PyPI packages spanning agent tracing, evaluation harnesses,
+% guardrails, and cost metering; contributor to HuggingFace Transformers, EleutherAI lm-evaluation-harness, Axolotl,
+% MLflow, and LlamaIndex. Research spans agent memory, LLM robustness, multi-view 3D reconstruction, and
+% transformer surrogates for PDE systems, with a TMLR publication and two papers in progress. Focus is on making
+% LLM systems measurable: benchmarking, evaluation rigor, retrieval latency, and inference cost.
+% \sectionspace
+
+% ================= EDUCATION =================
+\section{Education}\vspace{1mm}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\titleItem{University of Southern California}, Los Angeles, CA $|$ \emph{M.S. Computer Science} $|$ \emph{GPA: 3.73/4.0}}{\textbf{Jun 2025 -- Dec 2026}}
+      \resumeItemListStart
+      \vspace{1mm}
+        \resumeItem{Researcher, USC Computational Physics Group: distributed training and physical system modeling.}
+        \resumeItem{Volunteer researcher, DILL Lab: model alignment and grounding for LLMs.}
+        \resumeItem{Coursework: Analysis of Algorithms, Machine Learning, Applied Natural Language Processing, Multimedia Systems, Web Technologies}
+        % \resumeItem{Independent study: Reinforcement Learning (UC Berkeley CS 285 curriculum).}
+      \resumeItemListEnd
+    \vspace{1mm}
+    \resumeProjectHeading
+      {\titleItem{VIT}, Vellore, TN $|$ \emph{B.Tech. Computer Science and Business Systems} $|$ \emph{GPA: 4.0/4.0}}{\textbf{Jun 2019 -- Apr 2023}}
+      \resumeItemListStart
+      \resumeItem{Student Fellow, Royal Statistical Society: Statistics and Applied Machine Learning}
+      % \resumeItem{Toastmasters International: Public speaking and cohort management}
+      \resumeItem{Coursework: Deep Learning, Probability and Statistics, Artificial Intelligence}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\sectionspace
+
+% ================= EXPERIENCE =================
+\section{Professional Experience}\vspace{1mm}
+  \resumeSubHeadingListStart
+
+    % \resumeProjectHeading
+    %   {\titleItem{Co-Founder \& CEO} $|$ \href{https://usefriday.ai/}{\emph{FRIDAY.AI}}, Los Angeles, CA}{\textbf{Dec 2025 -- Present}}
+    %   \resumeItemListStart
+    %   \vspace{1mm}
+    %     \resumeItem{Founded and lead an enterprise AI company building a source-linked ``company brain'' and permissioned workflow agents that run entirely inside customer-controlled infrastructure (VPC, private cloud, or on-premise) on approved open models, with zero vendor retention of company artifacts.}
+    %     \resumeItem{Architected the full stack: connector-based ingestion across Slack, GitHub, Jira, Linear, Notion, Gmail, Drive, and Asana; storage; retrieval; model serving; and agent orchestration.}
+    %     \resumeItem{Designed an evaluation-controlled release loop: reviewed production failures become replayable tests, and candidate prompts, tools, routes, and models ship only after beating the current release on quality, latency, and cost.}
+    %     \resumeItem{Reduced inference cost by routing production work to smaller specialist open models with caching and constrained context, reserving frontier capability for design, hard cases, and evaluation.}
+    %     \resumeItem{Implemented governance controls throughout: read-only discovery, allowlisted tools, human approval gates on consequential actions, and a production evidence trail.}
+    %     \resumeItem{Business side: secured a \$350K angel commitment toward a \$2M pre-seed; built the pitch deck, go-to-market strategy, TAM/SAM/SOM analysis, enterprise cold outreach across LA and SoCal, and investor outreach across LA and Bay Area VCs.}
+    %     \resumeItem{Co-founded with Yug Gupta (production AI agent experience, AGI Inc).}
+    %   \resumeItemListEnd
+
+    % \vspace{1mm}
+    \resumeProjectHeading
+      {\titleItem{Software Development Engineer} $|$ \emph{JP Morgan Chase \& Co.}}{\textbf{Aug 2023 -- May 2025}}
+      \resumeItemListStart
+      \vspace{1mm}
+        \resumeItem{Shipped 6+ production services used by 40+ internal teams, owning development from design through deployment.}
+        \resumeItem{Engineered distributed batch and streaming data pipelines in \textbf{PySpark}, \textbf{Kafka}, \textbf{Kinesis}, and \textbf{Airflow} ingesting \textbf{15TB per day}, serving analytics, experimentation, and model-training consumers as a shared internal platform.}
+        \resumeItem{Owned Airflow orchestration across scheduling, dependencies, retries, backfills, and SLA monitoring.}
+        \resumeItem{Modeled curated tables on \textbf{Snowflake} and \textbf{Databricks Delta Lake} with data quality, freshness, sampling, and schema-evolution guarantees that caught correctness regressions before downstream consumption.}
+        \resumeItem{Built AWS data infrastructure (S3, EMR, Glue, Lambda, Athena, Redshift, Kinesis) as code via \textbf{Terraform}, with \textbf{Jenkins} CI/CD across build, test, and deploy pipelines to bring deploy time down by 45\%.}
+        \resumeItem{Fine-tuned and shipped a \textbf{T5-Large} code summarization model into the production code review workflow, cutting review time \textbf{20\%}.}
+        \resumeItem{Built a \textbf{MiniLM}-based classification service for automated ticket categorization and triage routing 8K+ daily tickets across 14 classes at 92\% accuracy}.
+        \resumeItem{Cut infrastructure incidents \textbf{30\%} through pipeline and service health observability with automated failure remediation.}
+        \resumeItem{Partnered with product and analytics teams serving 200+ teams, 13,000+ users, and 60+ data domains; shipped 12+ features across 5 quarterly releases.}
+        % \resumeItem{Stack: Python, PySpark, SQL, Snowflake, Databricks, Delta Lake, Airflow, Kafka, Kinesis, Terraform, Jenkins, Cribl, AWS.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\sectionspace
+
+% ================= PUBLICATIONS =================
+\section{Publications \& Research}\vspace{1mm}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\titleItem{AI University: LLM-Based Learning Assistant Adapted to Course-Specific Content} $|$ \emph{\href{https://openreview.net/forum?id=fOq0kufXLq}{TMLR}} $|$ \textbf{Accepted}}{\textbf{May 2026}}
+      \resumeItemListStart
+      \vspace{1mm}
+        \resumeItem{Built the instruction-tuning data construction pipeline and fine-tuned an open-source LLM with \textbf{LoRA} for course-specific question answering.}
+        \resumeItem{Grounded every response in traceable citations to lecture notes, textbooks, and time-stamped video lectures.}
+        \resumeItem{Attained higher quantitative scores on \textbf{86\%} of test cases and was preferred by human evaluators roughly \textbf{2x} more often than competing open-source models.}
+      \resumeItemListEnd
+
+    \vspace{1mm}
+    \resumeProjectHeading
+      {\titleItem{Prompt Sensitivity Landscapes} $|$ \emph{Independent Research} $|$ \emph{\href{https://github.com/ManasVardhan/Prompt-Sensitivity-Landscapes}{Code}} $|$ \emph{Target: EMNLP 2026}}{\textbf{Feb 2026 -- Apr 2026}}
+      \resumeItemListStart
+      \vspace{1mm}
+        \resumeItem{Designed a benchmark measuring LLM output divergence under semantically neutral prompt perturbations (synonym substitution, token deletion, typos).}
+        \resumeItem{Ran 185 evaluations across 5 frontier models, 5 task families, and 37 prompts through a provider-agnostic cached pipeline, yielding 5,065 token-level observations.}
+        % \resumeItem{Introduced a PSL-Score metric with cliff-edge detection and robustness-radius measurement.}
+        \resumeItem{Measured a \textbf{3.2x} sensitivity gap between the most and least robust model.}
+        \resumeItem{Showed token-level fragility does not transfer across models (Spearman rho $=$ 0.13 token-level, 0.09 prompt-level), ruling out any single universal hardening strategy.}
+        \resumeItem{Isolated synonym substitution as the dominant failure mode: 39.0\% of cliff edges from 27.5\% of the perturbation pool (1.42x over-representation).}
+      \resumeItemListEnd
+
+    \vspace{1mm}
+    \resumeProjectHeading
+      {\titleItem{Multi-View Fusion on Frozen Backbones for 3D Reconstruction} $|$ \emph{Independent Research, USC} }{\textbf{Sep 2025}}
+      \resumeItemListStart
+      \vspace{1mm}
+        \resumeItem{Developed a convex-fusion head aggregating six scenes into a single multi-view latent under \textbf{0.5M} trainable parameters.}
+        \resumeItem{Introduced a latent caching strategy precomputing per-view scene codes to enable fast training without re-encoding.}
+        \resumeItem{Achieved CLIP cosine similarity of 0.89 and SSIM of 0.90, outperforming Hunyuan3D-Turbo on perceptual metrics with <0.5M trainable parameters.}
+      \resumeItemListEnd
+
+    % \vspace{1mm}
+    % \resumeProjectHeading
+      % {\titleItem{LLM Robustness under Noisy Input Conditions} $|$ \emph{\todo{VENUE}} $|$ \emph{\todo{LINK}}}{\textbf{\todo{YEAR}}}
+      % \resumeItemListStart
+      % \vspace{1mm}
+      %   \resumeItem{\todo{ADD SUMMARY AND KEY RESULT -- earlier published work on LLM robustness to noisy inputs}}
+      % \resumeItemListEnd
+    
+    \vspace{1mm}
+      \resumeProjectHeading
+       {\titleItem{Perturbation Robustness in Language Models} $|$ \emph{Team Research, USC}  }{\textbf{Sep 2025}}
+      \resumeItemListStart
+      \vspace{1mm}
+        \resumeItem{Built the shared \textbf{perturbation pipeline} generating typo, OCR, whitespace, homophone, speech-like, and Gaussian noise at configurable severity, used across the full study.}
+        \resumeItem{Set up the unified \textbf{evaluation harness} standardizing prompting and scoring across 4 models (Phi-3.5 Mini, Llama 3, Qwen 2.5, Mistral 7B) and 6 benchmarks (GSM8K, MMLU, HumanEval, BBH, ARC-C, SQuAD v2).}
+        \resumeItem{Ran the complete Phi-3.5 Mini baseline over 42 benchmark-perturbation conditions, measuring GSM8K accuracy fall from \textbf{85.4\% to 40.5\%} under 5\% Gaussian noise.}
+        \resumeItem{Contributed to \textbf{LRD}, a cosine-divergence metric tracking how perturbations propagate through transformer hidden states layer by layer, and co-analyzed the spike-and-suppress regime observed in Phi-3.5.}
+        \resumeItem{Led the \textbf{LoRA}-based stabilizer implementation (rank 4, alpha 8) on attention projections, trained with a joint accuracy and stability loss.}
+      \resumeItemListEnd
+
+    \vspace{1mm}
+    \resumeProjectHeading
+      {\titleItem{Spatio-Temporal Transformers for PDE Surrogates} $|$ \emph{Computational Physics Group, USC}}{\textbf{Jul 2025 -- Sep 2025}}
+      \resumeItemListStart
+      \vspace{1mm}
+        \resumeItem{Implemented a multi-physics pretraining pipeline across PDE families (advection, diffusion, heat conduction), fine-tuned per task to replace computationally expensive finite element method runs.}
+        \resumeItem{Scaled training via \textbf{PyTorch DDP}, gradient accumulation, and deterministic seeding for reproducible multi-GPU runs.}
+        \resumeItem{Built the training data generation pipeline end to end, cutting per-sample acquisition from 20 minutes to 15 seconds (\textbf{80x}).}
+        \resumeItem{Matched FEM baselines within 2.1\% relative L2 error while cutting inference from minutes to milliseconds.} 
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\sectionspace
+
+% ================= OPEN SOURCE PACKAGES =================
+% \section{Open-Source Contributions (7 Published PyPI Packages)}\vspace{1mm}
+%   \resumeSubHeadingListStart
+%     \resumeProjectHeading
+%       {\titleItem{LLM \& Agent Infrastructure Suite} $|$ \emph{\href{https://pypi.org/user/ManasVardhan/}{pypi.org/user/ManasVardhan}} $|$ \emph{author \& maintainer}}{\textbf{Feb 2026 -- Present}}
+%       \resumeItemListStart
+%       \vspace{1mm}
+        % \resumeItem{\texttt{llm-shelter} -- guardrails toolkit: PII redaction (emails, phones, SSNs, cards, IPs, cloud keys), prompt-injection detection (instruction override, delimiter and encoding attacks), toxicity filtering, rate and length limits, an OWASP LLM Top 10 audit, plus drop-in FastAPI and Flask middleware, decorators, and a CLI.}
+        % \resumeItem{\texttt{agent-trace-replay} -- record, replay, and diff agent execution traces via context manager, decorator, or automatic LangChain and LlamaIndex callbacks; self-contained HTML timelines and OpenTelemetry (OTLP/JSON) export to Jaeger and Tempo for deterministic reproduction of failures.}
+        % \resumeItem{\texttt{ai-agent-sentry} -- single-decorator crash reporting: automatic root-cause classification across timeouts, hallucinations, context overflow, rate limits, auth errors, silent failures, and wrong-tool selection; live dashboard with failure rates, reliability scoring, and cost tracking; retry-storm detection, cascading-failure correlation, custom classifiers, and Slack, webhook, and email alerting.}
+        % \resumeItem{\texttt{llm-cost-guardian} -- real-time cost metering and budget enforcement: one-line OpenAI and Anthropic client wrapping, per-call cost from token usage, hard caps, soft warnings, sliding-window policies, per-user and per-key attribution, Slack and Discord alerts, Prometheus export, JSON and CSV reporting, thread-safe for concurrent async workloads.}
+        % \resumeItem{\texttt{bench-my-llm} -- benchmarking CLI for any OpenAI-compatible API (OpenAI, Anthropic, Ollama, vLLM, Together): time to first token via streaming, tokens per second, p50/p95/p99 latency, cost estimation, reference-based quality scoring, side-by-side model comparison over reasoning, coding, creative, and factual suites, with JSON, CSV, Markdown, and HTML export for CI.}
+        % \resumeItem{\texttt{llm-promptdiff} -- git-style version control for prompts: versioned commits with metadata, line-level diffs with similarity scoring, offline lexical-semantic comparison with change verdicts, optional embedding scoring, a shared cross-project registry, tagging, auto-generated changelogs, per-version evaluation against test cases, and a CI gate that fails builds below a similarity threshold.}
+        % \resumeItem{\texttt{mcp-server-forge} -- scaffold, test, and publish Model Context Protocol servers in one command: Jinja2-templated projects with tools, resources, and prompts, a Dockerfile, a hot-reload dev server, a JSON-RPC-over-stdio test harness, and static plus live validation against the MCP specification.}
+
+      %   \resumeItem{Built and published \textbf{7 Python packages} spanning LLM guardrails, agent observability, reliability monitoring, cost control, benchmarking, prompt regression testing, and MCP developer tooling.} \resumeItem{Developed \texttt{llm-shelter}, \texttt{agent-trace-replay}, and \texttt{ai-agent-sentry} for PII redaction, prompt-injection detection, deterministic agent replay, OpenTelemetry tracing, automated failure classification, reliability monitoring, and cascading-failure detection.} \resumeItem{Built \texttt{llm-cost-guardian} and \texttt{bench-my-llm} for real-time token-cost metering, budget enforcement, TTFT and throughput measurement, p50/p95/p99 latency profiling, quality evaluation, and CI-ready model comparison across OpenAI-compatible APIs.} \resumeItem{Created \texttt{llm-promptdiff} for git-style prompt versioning, semantic diffs, regression evaluation, and CI gates, and \texttt{mcp-server-forge} for scaffolding, testing, validating, and publishing Model Context Protocol servers.}
+      % \resumeItemListEnd
+
+  %   \vspace{1mm}
+  %   \resumeProjectHeading
+  %     {\titleItem{Contributor to}}{\textbf{Ongoing}}
+  %     \resumeItemListStart
+  %     \vspace{1mm}
+  %       \resumeItem{HuggingFace Transformers, EleutherAI lm-evaluation-harness, Axolotl, MLflow, PyTorch Lightning, LlamaIndex, Marimo.}
+  %     \resumeItemListEnd
+  % \resumeSubHeadingListEnd
+% \sectionspace
+
+% ================= PROJECTS =================
+\section{Projects}\vspace{1mm}
+  \resumeSubHeadingListStart
+\resumeProjectHeading
+       {\titleItem{FRIDAY.AI: Enterprise Agent Platform \& Company Knowledge Layer} $|$ \href{https://usefriday.ai/}{\emph{Independent Product}}}{\textbf{Dec 2025 -- Apr 2026}}
+      \resumeItemListStart
+      \vspace{1mm}
+        \resumeItem{Built permissioned workflow agents that run entirely inside customer-controlled infrastructure (VPC, private cloud, or on-premise) on approved open models, with zero vendor retention of company artifacts.}
+        \resumeItem{Architected the full stack: connector-based ingestion across Slack, GitHub, Jira, Linear, Notion, Gmail, Drive, and Asana; storage; retrieval; model serving; and agent orchestration.}
+        \resumeItem{Designed an evaluation-controlled release loop: reviewed production failures became replayable tests, and candidate prompts, tools, routes, and models shipped only after beating the current release on quality, latency, and cost.}
+        \resumeItem{Reduced inference cost by routing production work to smaller specialist open models with caching and constrained context, reserving frontier capability for design, hard cases, and evaluation.}
+        \resumeItem{Implemented governance controls including read-only discovery, allowlisted tools, human approval gates, and production audit trails.}
+        % \resumeItem{Drove the commercial side: pitch deck, go-to-market strategy, TAM/SAM/SOM analysis, enterprise outreach across LA and SoCal, and investor outreach across LA and Bay Area VCs; secured a \$350K angel commitment toward a \$2M pre-seed.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\titleItem{reMem -- Belief-Consolidation Memory for AI Agents} $|$ \emph{\href{https://github.com/ManasVardhan/reMem}{Code}}}{\textbf{Dec 2025 -- Present}}
+      \resumeItemListStart
+      \vspace{1mm}
+        \resumeItem{Built a memory layer distilling conversations into durable, updatable beliefs with supersession and confidence thresholds, addressing stale-memory persistence and non-abstaining top-k vector retrieval.}
+        \resumeItem{Served sub-100ms recall over 10K+ context entries via \textbf{FAISS} dense retrieval with cross-encoder reranking.}
+        \resumeItem{Benchmarked against Mem0 on its LoCoMo harness and improved overall accuracy 77.1\% vs. 73.2\% and temporal reasoning 40.0\% vs. 21.1\%.}
+        \resumeItem{Reached \textbf{66-72\%} on PrefEval choice-based (150 instances, distractor sweep) against a \textbf{45-49\%} naive-vector baseline (+20 to +27pp), roughly halving preference violations, with grounding at 40\% versus 22.5\%.}
+        \resumeItem{Used cross-vendor judge evaluation and validated performance gain of +25pp with Cohen’s kappa of 0.78–0.90.}
+        \resumeItem{Established a three-regime map: episodic recall favored observations-first, concentrated preference favored beliefs-first, and diffuse persona-driven preference favored plain vector RAG.}
+        \resumeItem{Built a dual-track evaluation harness pairing deterministic offline metrics (recall@5, MRR, grounded accuracy, abstention precision and recall from gold evidence IDs) with LLM-judged QA accuracy to close the offline-to-online gap.}
+      \resumeItemListEnd
+    \vspace{1mm}
+\resumeProjectHeading
+      {\titleItem{LLM \& Agent Infrastructure Suite} $|$ \emph{\href{https://pypi.org/user/ManasVardhan/}{7 Published PyPI Packages}} $|$ \emph{author \& maintainer}}{\textbf{Feb 2026 -- May 2026}}
+      \resumeItemListStart
+      \vspace{1mm}
+        % \resumeItem{\texttt{llm-shelter} -- guardrails toolkit: PII redaction (emails, phones, SSNs, cards, IPs, cloud keys), prompt-injection detection (instruction override, delimiter and encoding attacks), toxicity filtering, rate and length limits, an OWASP LLM Top 10 audit, plus drop-in FastAPI and Flask middleware, decorators, and a CLI.}
+        % \resumeItem{\texttt{agent-trace-replay} -- record, replay, and diff agent execution traces via context manager, decorator, or automatic LangChain and LlamaIndex callbacks; self-contained HTML timelines and OpenTelemetry (OTLP/JSON) export to Jaeger and Tempo for deterministic reproduction of failures.}
+        % \resumeItem{\texttt{ai-agent-sentry} -- single-decorator crash reporting: automatic root-cause classification across timeouts, hallucinations, context overflow, rate limits, auth errors, silent failures, and wrong-tool selection; live dashboard with failure rates, reliability scoring, and cost tracking; retry-storm detection, cascading-failure correlation, custom classifiers, and Slack, webhook, and email alerting.}
+        % \resumeItem{\texttt{llm-cost-guardian} -- real-time cost metering and budget enforcement: one-line OpenAI and Anthropic client wrapping, per-call cost from token usage, hard caps, soft warnings, sliding-window policies, per-user and per-key attribution, Slack and Discord alerts, Prometheus export, JSON and CSV reporting, thread-safe for concurrent async workloads.}
+        % \resumeItem{\texttt{bench-my-llm} -- benchmarking CLI for any OpenAI-compatible API (OpenAI, Anthropic, Ollama, vLLM, Together): time to first token via streaming, tokens per second, p50/p95/p99 latency, cost estimation, reference-based quality scoring, side-by-side model comparison over reasoning, coding, creative, and factual suites, with JSON, CSV, Markdown, and HTML export for CI.}
+        % \resumeItem{\texttt{llm-promptdiff} -- git-style version control for prompts: versioned commits with metadata, line-level diffs with similarity scoring, offline lexical-semantic comparison with change verdicts, optional embedding scoring, a shared cross-project registry, tagging, auto-generated changelogs, per-version evaluation against test cases, and a CI gate that fails builds below a similarity threshold.}
+        % \resumeItem{\texttt{mcp-server-forge} -- scaffold, test, and publish Model Context Protocol servers in one command: Jinja2-templated projects with tools, resources, and prompts, a Dockerfile, a hot-reload dev server, a JSON-RPC-over-stdio test harness, and static plus live validation against the MCP specification.}
+
+        \resumeItem{Built and published \textbf{7 Python packages} spanning LLM guardrails, agent observability, reliability monitoring, cost control, benchmarking, prompt regression testing, and MCP developer tooling.} \resumeItem{Developed \texttt{llm-shelter}, \texttt{agent-trace-replay}, and \texttt{ai-agent-sentry} for PII redaction, prompt-injection detection, deterministic agent replay, OpenTelemetry tracing, automated failure classification, reliability monitoring, and cascading-failure detection.} \resumeItem{Built \texttt{llm-cost-guardian} and \texttt{bench-my-llm} for real-time token-cost metering, budget enforcement, TTFT and throughput measurement, p50/p95/p99 latency profiling, quality evaluation, and CI-ready model comparison across OpenAI-compatible APIs.} \resumeItem{Created \texttt{llm-promptdiff} for git-style prompt versioning, semantic diffs, regression evaluation, and CI gates, and \texttt{mcp-server-forge} for scaffolding, testing, validating, and publishing Model Context Protocol servers.}
+      \resumeItemListEnd
+
+    
+    \resumeProjectHeading
+      {\titleItem{mlx-air -- Layer-Streaming Inference for Apple Silicon} $|$ \emph{\href{https://github.com/ManasVardhan/mlx-air}{Code}}}{\textbf{May 2026}}
+      \resumeItemListStart
+      \vspace{1mm}
+        \resumeItem{Built a layer-streaming inference runtime for memory-constrained Apple Silicon, loading, executing, and evicting transformer layers sequentially from disk.}
+        \resumeItem{Cut peak memory from roughly \textbf{35GB to 1.5GB}, enabling a 70B 4-bit model to run on an 8GB MacBook Air.}
+        \resumeItem{Exploited unified memory and fast NVMe: weights were usable the moment they landed in RAM, with no PCIe transfer bottleneck.}
+      \resumeItemListEnd
+
+    \vspace{1mm}
+    \resumeProjectHeading
+      {\titleItem{Proactive Intent Prediction from Multimodal User Context} $|$ \emph{FRIDAY.AI}}{\textbf{Apr 2026}}
+      \resumeItemListStart
+      \vspace{1mm}
+        \resumeItem{Built a proactive orchestration system predicting user needs before an explicit query, fusing screen-level context captures with interaction history through a lightweight classification head over LLM embeddings.}
+        \resumeItem{Engineered a multimodal context extraction pipeline combining screenshot parsing (OCR and layout detection) with structured application metadata via MCP integrations.}
+        \resumeItem{Defined evaluation for open-ended proactive suggestions (acceptance rate, LLM-as-judge relevance scoring) under implicit and ambiguous intent.}
+      \resumeItemListEnd
+
+    % \vspace{1mm}
+    % \resumeProjectHeading
+      % {\titleItem{openclaw-voice -- Real-Time Local Voice Pipeline} $|$ \emph{\href{https://github.com/ManasVardhan/openclaw-voice}{Code}}}{\textbf{2026}}
+      % \resumeItemListStart
+      % \vspace{1mm}
+      %   \resumeItem{End-to-end local voice interface for AI agents: microphone capture, Silero VAD, Whisper speech-to-text, LLM response, and Piper text-to-speech, streamed over WebSocket.}
+      %   \resumeItem{Everything except the model call runs locally, with latency budgets across each pipeline stage.}
+      % \resumeItemListEnd
+
+    \vspace{1mm}
+    \resumeProjectHeading
+      {\titleItem{Editable 3D Scenes} $|$ \emph{SIGGRAPH Hackathon Demo} $|$ \emph{\href{https://www.youtube.com/watch?v=c6djgtN2Pa0}{Link}}}{\textbf{Jul 2026}}
+      \resumeItemListStart
+      \vspace{1mm}
+       \resumeItem{Built and demoed a system for \textbf{editing generated 3D scenes} that are otherwise frozen after generation.}
+        \resumeItem{Implemented localized \textbf{latent-space editing} over TripoSR scene codes, resolving object-level masks and re-decoding only affected regions rather than the full scene.}
+        \resumeItem{Added support for object insertion, deletion, and translation, material and albedo swap, and relighting, applied through a text or click interface without re-running generation.}
+        \resumeItem{Cut edit latency from \textbf{94s} (full regeneration) to \textbf{1.8s}, a \textbf{52x} speedup, while preserving unedited geometry at \textbf{SSIM 0.97} and \textbf{LPIPS 0.04}.}
+        \resumeItem{Held CLIP alignment to the edit prompt at \textbf{0.87} and limited drift across \textbf{10} chained sequential edits to under \textbf{3\%} SSIM degradation.}
+        \resumeItem{Benchmarked against full-pipeline regeneration on \textbf{120} scene-edit pairs; \textbf{83\%} of edits were rated as good or better than regeneration by \textbf{12} evaluators.}
+      \resumeItemListEnd
+
+    \vspace{1mm}
+    % \resumeProjectHeading
+    %   {\titleItem{mteb-domain-embeddings} $|$ \emph{Research in progress}}{\textbf{2026}}
+    %   \resumeItemListStart
+    %   \vspace{1mm}
+    %     \resumeItem{Domain-specialized embedding model applying the NV-Embed recipe (synthetic query generation, hard-negative mining, two-stage contrastive instruction tuning) to a small base model on a single free T4, targeting a specific MTEB subcategory. \todo{ADD RESULTS ONCE TRAINED}}
+    %   \resumeItemListEnd
+
+    % \vspace{1mm}
+    \resumeProjectHeading
+      {\titleItem{Alignment \& RL Measurement } $|$ \emph{Independent Research}}{\textbf{Jan 2026}}
+      \resumeItemListStart
+      \vspace{1mm}
+        \resumeItem{Developed a reproducible probe suite auditing latent reward-model biases across six axes (length, sycophancy, position, jailbreak susceptibility, social desirability, formatting).}
+        \resumeItem{Ran \textbf{4,800} paired probes across \textbf{5} open reward models (Skywork-Reward, ArmoRM, Starling-RM, UltraRM, DeBERTa-v3-RM), holding content fixed while varying only the probed attribute.}
+        \resumeItem{Measured a \textbf{0.31} reward increase per 100 additional tokens at constant content quality, and sycophantic agreement winning \textbf{68\%} of pairs against factually correct disagreement.}
+        \resumeItem{Found response ordering shifts preference by \textbf{9pp} on identical pairs, and markdown formatting alone lifts reward by \textbf{0.18} (Cohen's $d = 0.44$).}
+        \resumeItem{Quantified capability cost of RLHF across \textbf{4} base/tuned model pairs: MMLU \textbf{-2.1pp}, GSM8K \textbf{-4.7pp}, HumanEval \textbf{-6.3pp} against \textbf{+31pp} on harmlessness.}
+        \resumeItem{Measured output entropy falling \textbf{38\%} and distinct-3 diversity \textbf{27\%} post-tuning, with expected calibration error rising \textbf{0.06 to 0.14}.}
+        \resumeItem{Trained \textbf{240} agents across \textbf{6} environments, cataloguing \textbf{11} recurring failure modes including reward hacking, entropy collapse, and value overestimation.}
+        \resumeItem{Built a classifier over training curves identifying failure mode at \textbf{87\%} accuracy within the first \textbf{15\%} of training steps, cutting wasted compute \textbf{40\%}.}
+      \resumeItemListEnd
+
+    \vspace{1mm}
+    % \resumeProjectHeading
+    %   {\titleItem{{Multi-View Fusion on Frozen Backbones for 3D Reconstruction}} $|$ \emph{Independent Research, USC}}{\textbf{Sep 2025}}
+    %        \resumeItemListStart
+    %             \resumeItem{Proposed a lightweight convex-fusion head that aggregates six TripoSR scene codes into a single multiview latent, keeping the encoder--decoder completely frozen with $<$0.5M trainable parameters.}
+    %             \resumeItem{Introduced a latent caching strategy that precomputes all per-view scene codes, enabling fast training in latent space without repeated rendering or encoding.}
+    %             \resumeItem{Achieved CLIP cosine similarity of 0.89 and SSIM of 0.90, substantially outperforming Hunyuan3D-Turbo on perceptual metrics despite orders-of-magnitude fewer parameters.}
+    %        \resumeItemListEnd
+
+
+    % \vspace{1mm}
+    % \resumeProjectHeading
+    %   {\titleItem{Applied Agents \& Applications} $|$ \emph{Independent}}{\textbf{2025 -- 2026}}
+    %   \resumeItemListStart
+    %   \vspace{1mm}
+    %     \resumeItem{\texttt{code-suggestion-agent}, \texttt{google-calendar-agent}, \texttt{podcast-summarization-agent}: task-specific LLM agents with tool integration.}
+    %     \resumeItem{\texttt{OpenClaw-iOS}: native iOS client for a local agent runtime. \texttt{CodeSummarization}: Streamlit app over CodeT5p-220m.}
+    %     \resumeItem{\texttt{llm-mastery}: interactive 13-module curriculum tracker for LLM engineering. \texttt{MovieRay}, \texttt{ventureAI}, \texttt{fashion-tech-guide}, \texttt{audio-from-video}: applied ML and product prototypes.}
+    %     \resumeItem{Scrollytelling web experience built around a Robert Frost poem (creative web development).}
+    %   \resumeItemListEnd
+
+    % \vspace{1mm}
+    % \resumeProjectHeading
+    %   {\titleItem{Earlier ML \& Vision Work} $|$ \emph{Coursework and independent}}{\textbf{2021 -- 2025}}
+    %   \resumeItemListStart
+    %   \vspace{1mm}
+    %     \resumeItem{\texttt{Oil\_Spill\_Segmentation} (semantic segmentation), \texttt{FaceRecognition}, \texttt{MaskOn} (detection), \texttt{fitmedik\_burnout\_vulnerability} (predictive modeling), \texttt{SentimentAnalysis} and \texttt{kaggle\_sentiment\_analysis} (NLP), \texttt{ML\_in\_Finance}, \texttt{Central-Limit-Theorum}, \texttt{ANN\_notebooks}, \texttt{Classifier\_Play}.}
+    %     \resumeItem{USC CSCI 544 (Applied NLP): sentiment analysis with Word2Vec and neural architectures. USC CSCI 576 (Multimedia Systems): DCT-based image compression, image resampling and quantization, wavelet transforms, video signal processing.}
+    %   \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\sectionspace
+
+% ================= WRITING =================
+\section{Writing \& Community}\vspace{1mm}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\titleItem{The Agent Stack} $|$ \emph{\href{https://theagentstack.hashnode.dev/}{theagentstack.hashnode.dev}} $|$ \emph{16 technical posts}}{\textbf{Jan 2026 -- Present}}
+      \resumeItemListStart
+      \vspace{1mm}
+        \resumeItem{Long-form technical writing on agent harnesses and runtime design, MCP context overhead, evaluation methodology and measurement noise, inference efficiency, and hybrid workflow cost.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\sectionspace
+
+% ================= SKILLS =================
+\section{Technical Skills}\vspace{1mm}
+ \begin{itemize}[leftmargin=0.15in, label=]
+    \item{
+\titleItem{Languages}{: Python, C++, Java, JavaScript, TypeScript, SQL, R, Bash, Swift } \\
+\titleItem{ML \& Deep Learning}{: PyTorch, TensorFlow, HuggingFace Transformers, Accelerate, scikit-learn, NumPy, pandas, transformer internals, representation learning, transfer learning, contrastive learning} \\
+\titleItem{LLM \& Agents}{: Agent runtime and harness design, agent loops, context engineering, agentic memory, RAG, just-in-time retrieval, tool and function calling, MCP, prompt engineering, agentic coding tools (Codex, Claude Code), LangChain, LlamaIndex, Ollama} \\
+\titleItem{Post-Training}{: Supervised fine-tuning, instruction tuning, LoRA/PEFT, Axolotl, DeepSpeed, PyTorch DDP, multi-GPU and distributed training, mixed-precision training, gradient accumulation, CUDA, GPU optimization} \\
+\titleItem{Evaluation \& Benchmarking}{: Benchmark design and implementation, LLM-as-judge, judge-human agreement calibration (Cohen's kappa), inter-rater reliability, blind and holdout evaluation, recall@k, MRR, regression harnesses, latency and cost profiling, lm-evaluation-harness, LoCoMo, PrefEval, MTEB} \\
+\titleItem{Serving \& Inference}{: vLLM, low-latency and batch inference, KV and prompt caching, model routing and right-sizing, FAISS, vector search, cross-encoder reranking, embeddings} \\
+\titleItem{Computer Vision \& Multimodal}{: Vision Transformers (ViT), CLIP, SSIM, multimodal fusion, image and video understanding, OCR, layout detection, OpenCV, 3D reconstruction, video signal processing, DCT compression, wavelet transforms} \\
+\titleItem{Data Engineering}{: Apache Spark, PySpark, Kafka, AWS Kinesis, Airflow, Snowflake, Databricks, Delta Lake, ETL/ELT, batch and streaming pipelines, feature engineering, data quality, schema evolution, lineage} \\
+\titleItem{Cloud \& Infrastructure}{: AWS (S3, EC2, EMR, Glue, Lambda, Athena, Redshift, Kinesis), Docker, Kubernetes, Terraform, Jenkins, CI/CD, Unix/Linux, Git, OpenTelemetry, Prometheus, MLflow} \\
+\titleItem{Software Engineering}{: System Design, Distributed Systems, REST APIs, Microservices, Concurrency, Asynchronous Programming, FastAPI, Flask, Django, gRPC, WebSockets}\\
+\titleItem{Testing \& Quality}{: Unit and integration testing, automated test suites, regression testing, test harness design, deterministic replay, pytest, profiling} \\
+\titleItem{Statistics}{: Regression modeling, hypothesis testing, experimental design, A/B testing, rank correlation, confidence intervals} \\
+\titleItem{Guardrails \& Responsible AI}{: PII redaction, prompt-injection detection, toxicity filtering, OWASP LLM Top 10, hallucination mitigation, abstention, human-in-the-loop approval, auditability} \\
+\titleItem{Open-Source Contributor to}{: HuggingFace Transformers, EleutherAI lm-evaluation-harness, Axolotl, MLflow, PyTorch Lightning, LlamaIndex, Marimo.}
+    }
+ \end{itemize}
+\sectionspace
+
+% % ================= ADDITIONAL =================
+% \section{Additional}\vspace{1mm}
+%   \resumeSubHeadingListStart
+%     \item
+%     \resumeItemListStart
+%       \vspace{1mm}
+%         \resumeItem{\textbf{Entrepreneurship:} Prava agentic-commerce hackathon (autonomous SaaS renewal and spend agent: invoice-derived renewal ledger, policy engine, one-time card execution, audit trail). EdTech concept for Indian students as an alternative to exam culture (ideation).}
+%         \resumeItem{\textbf{Interests:} Reinforcement learning research, evaluation methodology, inference efficiency, and measurement of AI capability trends.}
+%         \resumeItem{\textbf{Work authorization:} \todo{ADD STATUS}}
+%     \resumeItemListEnd
+%   \resumeSubHeadingListEnd
+
+\end{document}
