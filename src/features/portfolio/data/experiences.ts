@@ -7,13 +7,13 @@ export const EXPERIENCES: Experience[] = [
     companyLogo: "/company-logos/friday.svg",
     positions: [
       {
-        id: "friday-founder",
-        title: "Founder",
+        id: "friday-ai-engineer",
+        title: "AI Engineer",
         employmentPeriod: {
           start: "12.2025",
         },
         employmentType: "Full-time",
-        icon: "idea",
+        icon: "code",
         description: `- Permissioned workflow agents running inside customer infrastructure on approved open models.
 - Connector ingestion across Slack, GitHub, Jira, Notion, Gmail, Drive, and Asana.
 - Evaluation-gated releases: production failures become replayable tests.

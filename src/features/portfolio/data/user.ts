@@ -21,7 +21,7 @@ export const USER: User = {
   jobTitle: "ML & Infrastructure Engineer",
   jobs: [
     {
-      title: "Founder",
+      title: "AI Engineer",
       company: "FRIDAY.AI",
       website: "https://usefriday.ai/",
     },
