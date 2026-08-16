@@ -4,6 +4,7 @@ import { Icons } from "./icons";
 
 const SOCIAL_ICONS: Record<string, React.ComponentType<{ className?: string }>> =
   {
+    X: Icons.x,
     GitHub: Icons.github,
     LinkedIn: Icons.linkedin,
     "The Agent Stack": Icons.hashnode,
