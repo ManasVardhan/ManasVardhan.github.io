@@ -35,23 +35,6 @@ export const PROJECTS: Project[] = [
     isExpanded: true,
   },
   {
-    id: "friday-ai",
-    title: "FRIDAY.AI",
-    period: {
-      start: "12.2025",
-      end: "04.2026",
-    },
-    link: "https://usefriday.ai/",
-    image: "/projects/friday.jpg",
-    skills: ["Agent Orchestration", "RAG", "MCP", "Evaluation"],
-    description: `Enterprise agent platform running inside customer infrastructure.
-- Permissioned agents on approved open models, zero retention
-- Ingestion across Slack, GitHub, Jira, Notion, Gmail, and Drive
-- Evaluation-gated releases on quality, latency, and cost
-- Allowlisted tools, approval gates, and audit trails`,
-    isExpanded: true,
-  },
-  {
     id: "llm-agent-infra-suite",
     title: "LLM & Agent Infrastructure Suite",
     period: {
