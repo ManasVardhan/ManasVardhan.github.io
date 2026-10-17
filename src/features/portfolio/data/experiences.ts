@@ -2,38 +2,6 @@ import type { Experience } from "../types/experiences";
 
 export const EXPERIENCES: Experience[] = [
   {
-    id: "friday-ai",
-    companyName: "FRIDAY.AI",
-    companyLogo: "/company-logos/friday.svg",
-    positions: [
-      {
-        id: "friday-ai-engineer",
-        title: "AI Engineer",
-        employmentPeriod: {
-          start: "12.2025",
-        },
-        employmentType: "Full-time",
-        icon: "code",
-        description: `- Permissioned workflow agents running inside customer infrastructure on approved open models.
-- Connector ingestion across Slack, GitHub, Jira, Notion, Gmail, Drive, and Asana.
-- Evaluation-gated releases: production failures become replayable tests.
-- Cut inference cost by routing to smaller specialist models with caching.
-- Governance throughout: allowlisted tools, approval gates, and audit trails.`,
-        skills: [
-          "Agent Orchestration",
-          "RAG",
-          "Model Routing",
-          "Evaluation",
-          "FastAPI",
-          "MCP",
-          "vLLM",
-        ],
-        isExpanded: true,
-      },
-    ],
-    isCurrentEmployer: true,
-  },
-  {
     id: "usc",
     companyName: "University of Southern California",
     companyLogo: "/company-logos/usc.svg",
