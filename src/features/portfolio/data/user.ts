@@ -21,11 +21,6 @@ export const USER: User = {
   jobTitle: "ML & Infrastructure Engineer",
   jobs: [
     {
-      title: "AI Engineer",
-      company: "FRIDAY.AI",
-      website: "https://usefriday.ai/",
-    },
-    {
       title: "M.S. Computer Science",
       company: "University of Southern California",
       website: "https://www.usc.edu",
@@ -52,7 +47,6 @@ export const USER: User = {
     "agent memory",
     "usc",
     "reMem",
-    "friday.ai",
     "the agent stack",
   ],
   dateCreated: "2026-08-15", // YYYY-MM-DD

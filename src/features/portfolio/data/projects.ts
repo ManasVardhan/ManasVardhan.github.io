@@ -75,7 +75,7 @@ export const PROJECTS: Project[] = [
     period: {
       start: "04.2026",
     },
-    link: "https://usefriday.ai/",
+    link: "https://github.com/ManasVardhan",
     image: "/projects/proactive-intent.svg",
     skills: ["Multimodal", "OCR", "MCP", "Classification"],
     description: `Predicting user needs before an explicit query.
